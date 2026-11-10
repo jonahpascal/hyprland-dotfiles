@@ -1,13 +1,13 @@
-# My Hyprland Dotfiles (Latest Hyprland + Alacritty)
+# My Hyprland Dotfiles (Hyprland v0.57+ Lua + Alacritty)
 
-Configuration optimisée pour **CachyOS / Arch Linux** (AZERTY + GPU Intel + Alacritty).
+Configuration optimisée pour **CachyOS / Arch Linux** (Format Lua natif Hyprland 0.57+, AZERTY + Alacritty + Waybar).
 
 ## 🚀 Installation rapide sur CachyOS
 
 Ouvre un terminal sur ta session CachyOS et lance :
 
 ```bash
-git clone https://github.com/<TON_USERNAME>/<TON_REPO>.git ~/dotfiles
+git clone https://github.com/jonahpascal/hyprland-dotfiles.git ~/dotfiles
 cd ~/dotfiles
 chmod +x install.sh
 ./install.sh
