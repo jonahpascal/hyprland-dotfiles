@@ -31,108 +31,138 @@
     --ctp-mantle:    #292c3c;
     --ctp-crust:     #232634;
 
-    /* Firefox Theme Variables Mapping */
-    --toolbar-bgcolor: var(--ctp-base) !important;
-    --toolbar-color: var(--ctp-text) !important;
-    --toolbar-field-background-color: var(--ctp-mantle) !important;
-    --toolbar-field-color: var(--ctp-text) !important;
-    --toolbar-field-border-color: var(--ctp-surface0) !important;
-    --toolbar-field-focus-background-color: var(--ctp-mantle) !important;
-    --toolbar-field-focus-color: var(--ctp-text) !important;
-    --toolbar-field-focus-border-color: var(--ctp-mauve) !important;
+    /* Firefox System Colors Override */
+    --toolbar-bgcolor: #303446 !important;
+    --toolbar-color: #c6d0f5 !important;
+    --toolbar-field-background-color: #292c3c !important;
+    --toolbar-field-color: #c6d0f5 !important;
+    --toolbar-field-border-color: #414559 !important;
+    --toolbar-field-focus-background-color: #232634 !important;
+    --toolbar-field-focus-color: #c6d0f5 !important;
+    --toolbar-field-focus-border-color: #ca9ee6 !important;
 
-    --lwt-accent-color: var(--ctp-crust) !important;
-    --lwt-text-color: var(--ctp-text) !important;
-    --lwt-selected-tab-background-color: var(--ctp-base) !important;
-    --tab-selected-textcolor: var(--ctp-mauve) !important;
-    --tab-selected-bgcolor: var(--ctp-base) !important;
+    --lwt-accent-color: #232634 !important;
+    --lwt-text-color: #c6d0f5 !important;
+    --lwt-selected-tab-background-color: #303446 !important;
 }
 
-/* Barre d'onglets & Fond supérieur */
+/* --------------------------------------------------------------------------
+   Tabs (Onglets)
+   -------------------------------------------------------------------------- */
 #TabsToolbar {
-    background-color: var(--ctp-crust) !important;
-    color: var(--ctp-text) !important;
+    background-color: #232634 !important;
+    color: #c6d0f5 !important;
 }
 
-/* Onglets inactifs */
-.tabbrowser-tab:not([selected="true"]) .tab-background {
-    background-color: transparent !important;
+/* Tous les titres d'onglets (inactifs) */
+.tabbrowser-tab .tab-label {
+    color: #a5adce !important; /* Subtext0 bien lisible */
+    opacity: 1 !important;
+}
+
+/* Survol onglet inactif */
+.tabbrowser-tab:hover .tab-label {
+    color: #c6d0f5 !important;
 }
 
 .tabbrowser-tab:not([selected="true"]):hover .tab-background {
-    background-color: var(--ctp-surface0) !important;
+    background-color: #414559 !important;
     border-radius: 8px !important;
 }
 
-/* Onglet actif */
+/* Onglet actif (sélectionné) */
 .tabbrowser-tab[selected="true"] .tab-background {
-    background-color: var(--ctp-base) !important;
+    background-color: #303446 !important;
     border-radius: 8px 8px 0 0 !important;
-    box-shadow: 0 -2px 0 var(--ctp-mauve) inset !important;
+    box-shadow: 0 -2px 0 #ca9ee6 inset !important;
 }
 
 .tabbrowser-tab[selected="true"] .tab-label {
-    color: var(--ctp-mauve) !important;
-    font-weight: 600 !important;
+    color: #ca9ee6 !important; /* Mauve bien éclatant */
+    font-weight: 700 !important;
 }
 
-/* Barre d'outils / Navigation */
+/* --------------------------------------------------------------------------
+   Navigation Toolbar & URL Bar (Barre de recherche)
+   -------------------------------------------------------------------------- */
 #nav-bar {
-    background-color: var(--ctp-base) !important;
-    box-shadow: none !important;
+    background-color: #303446 !important;
     border-top: none !important;
+    box-shadow: none !important;
 }
 
-/* Barre d'URL (URL Bar) */
-#urlbar-background {
-    background-color: var(--ctp-mantle) !important;
-    border: 1px solid var(--ctp-surface0) !important;
+/* Fond du champ de recherche */
+#urlbar,
+#urlbar-background,
+#searchbar {
+    background-color: #292c3c !important; /* Mantle sombre */
+    color: #c6d0f5 !important;
+    border: 1px solid #414559 !important;
     border-radius: 8px !important;
 }
 
-#urlbar[focused="true"] > #urlbar-background {
-    border-color: var(--ctp-mauve) !important;
-    box-shadow: 0 0 0 1px var(--ctp-mauve) !important;
+/* Texte à l'intérieur de la barre d'adresse */
+#urlbar-input,
+.urlbar-input-box,
+#searchbar .searchbar-textbox {
+    color: #c6d0f5 !important;
+    background-color: transparent !important;
 }
 
-#urlbar-input {
-    color: var(--ctp-text) !important;
+/* Barre d'URL au focus / quand on tape */
+#urlbar[focused="true"] > #urlbar-background,
+#searchbar:focus-within {
+    background-color: #232634 !important; /* Crust plus sombre pour le contraste */
+    border-color: #ca9ee6 !important;
+    box-shadow: 0 0 0 1px #ca9ee6 !important;
 }
 
-/* Barre des favoris */
+/* Résultats / suggestions de la barre d'adresse */
+.urlbarView {
+    background-color: #292c3c !important;
+    color: #c6d0f5 !important;
+    border: 1px solid #414559 !important;
+    border-radius: 0 0 8px 8px !important;
+}
+
+.urlbarView-row[selected] {
+    background-color: #414559 !important;
+}
+
+.urlbarView-row[selected] .urlbarView-title {
+    color: #ca9ee6 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Bookmarks & Buttons
+   -------------------------------------------------------------------------- */
 #PersonalToolbar {
-    background-color: var(--ctp-base) !important;
-    color: var(--ctp-subtext1) !important;
-    border-bottom: 1px solid var(--ctp-mantle) !important;
+    background-color: #303446 !important;
+    color: #b5bfe2 !important;
+    border-bottom: 1px solid #232634 !important;
 }
 
-/* Boutons et icônes */
 toolbarbutton {
-    color: var(--ctp-text) !important;
-    fill: var(--ctp-text) !important;
+    color: #c6d0f5 !important;
+    fill: #c6d0f5 !important;
 }
 
 toolbarbutton:hover {
-    color: var(--ctp-mauve) !important;
-    fill: var(--ctp-mauve) !important;
+    color: #ca9ee6 !important;
+    fill: #ca9ee6 !important;
 }
 
-/* Menus contextuels et popups */
+/* --------------------------------------------------------------------------
+   Popups / Menus
+   -------------------------------------------------------------------------- */
 menupopup, panelmultiview {
-    --panel-background: var(--ctp-mantle) !important;
-    --panel-color: var(--ctp-text) !important;
-    --panel-border-color: var(--ctp-surface0) !important;
+    --panel-background: #292c3c !important;
+    --panel-color: #c6d0f5 !important;
+    --panel-border-color: #414559 !important;
     border-radius: 10px !important;
 }
 
 menuitem:hover, menu:hover {
-    background-color: var(--ctp-surface0) !important;
-    color: var(--ctp-mauve) !important;
-}
-
-/* Barre latérale (Sidebar) */
-#sidebar-box {
-    background-color: var(--ctp-mantle) !important;
-    --sidebar-background-color: var(--ctp-mantle) !important;
-    --sidebar-text-color: var(--ctp-text) !important;
+    background-color: #414559 !important;
+    color: #ca9ee6 !important;
 }
