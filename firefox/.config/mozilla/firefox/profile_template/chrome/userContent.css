@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Catppuccin Frappé userContent.css for Firefox Internal Pages
+   ========================================================================== */
+
+@-moz-document url("about:home"), url("about:newtab"), url("about:privatebrowsing") {
+    body {
+        background-color: #303446 !important; /* Base */
+        color: #c6d0f5 !important;            /* Text */
+    }
+
+    .search-inner-wrapper, .search-handoff-button {
+        background-color: #292c3c !important; /* Mantle */
+        border: 1px solid #414559 !important; /* Surface0 */
+        border-radius: 10px !important;
+        color: #c6d0f5 !important;
+    }
+
+    .top-site-outer .tile {
+        background-color: #292c3c !important;
+        border-radius: 10px !important;
+    }
+
+    .top-site-outer:hover .tile {
+        background-color: #414559 !important;
+    }
+}

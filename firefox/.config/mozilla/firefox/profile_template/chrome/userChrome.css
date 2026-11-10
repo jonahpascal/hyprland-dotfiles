@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Catppuccin Frappé userChrome.css for Firefox
+   ========================================================================== */
+
+:root {
+    /* Palette Catppuccin Frappé */
+    --ctp-rosewater: #f2d5cf;
+    --ctp-flamingo:  #eebebe;
+    --ctp-pink:      #f4b8e4;
+    --ctp-mauve:     #ca9ee6;
+    --ctp-red:       #e78284;
+    --ctp-maroon:    #ea999c;
+    --ctp-peach:     #ef9f76;
+    --ctp-yellow:    #e5c890;
+    --ctp-green:     #a6d189;
+    --ctp-teal:      #81c8be;
+    --ctp-sky:       #99d1db;
+    --ctp-sapphire:  #85c1dc;
+    --ctp-blue:      #8caaee;
+    --ctp-lavender:  #babbf1;
+    --ctp-text:      #c6d0f5;
+    --ctp-subtext1:  #b5bfe2;
+    --ctp-subtext0:  #a5adce;
+    --ctp-overlay2:  #949cbb;
+    --ctp-overlay1:  #838ba7;
+    --ctp-overlay0:  #737994;
+    --ctp-surface2:  #626880;
+    --ctp-surface1:  #51576d;
+    --ctp-surface0:  #414559;
+    --ctp-base:      #303446;
+    --ctp-mantle:    #292c3c;
+    --ctp-crust:     #232634;
+
+    /* Firefox Theme Variables Mapping */
+    --toolbar-bgcolor: var(--ctp-base) !important;
+    --toolbar-color: var(--ctp-text) !important;
+    --toolbar-field-background-color: var(--ctp-mantle) !important;
+    --toolbar-field-color: var(--ctp-text) !important;
+    --toolbar-field-border-color: var(--ctp-surface0) !important;
+    --toolbar-field-focus-background-color: var(--ctp-mantle) !important;
+    --toolbar-field-focus-color: var(--ctp-text) !important;
+    --toolbar-field-focus-border-color: var(--ctp-mauve) !important;
+
+    --lwt-accent-color: var(--ctp-crust) !important;
+    --lwt-text-color: var(--ctp-text) !important;
+    --lwt-selected-tab-background-color: var(--ctp-base) !important;
+    --tab-selected-textcolor: var(--ctp-mauve) !important;
+    --tab-selected-bgcolor: var(--ctp-base) !important;
+}
+
+/* Barre d'onglets & Fond supérieur */
+#TabsToolbar {
+    background-color: var(--ctp-crust) !important;
+    color: var(--ctp-text) !important;
+}
+
+/* Onglets inactifs */
+.tabbrowser-tab:not([selected="true"]) .tab-background {
+    background-color: transparent !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):hover .tab-background {
+    background-color: var(--ctp-surface0) !important;
+    border-radius: 8px !important;
+}
+
+/* Onglet actif */
+.tabbrowser-tab[selected="true"] .tab-background {
+    background-color: var(--ctp-base) !important;
+    border-radius: 8px 8px 0 0 !important;
+    box-shadow: 0 -2px 0 var(--ctp-mauve) inset !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-label {
+    color: var(--ctp-mauve) !important;
+    font-weight: 600 !important;
+}
+
+/* Barre d'outils / Navigation */
+#nav-bar {
+    background-color: var(--ctp-base) !important;
+    box-shadow: none !important;
+    border-top: none !important;
+}
+
+/* Barre d'URL (URL Bar) */
+#urlbar-background {
+    background-color: var(--ctp-mantle) !important;
+    border: 1px solid var(--ctp-surface0) !important;
+    border-radius: 8px !important;
+}
+
+#urlbar[focused="true"] > #urlbar-background {
+    border-color: var(--ctp-mauve) !important;
+    box-shadow: 0 0 0 1px var(--ctp-mauve) !important;
+}
+
+#urlbar-input {
+    color: var(--ctp-text) !important;
+}
+
+/* Barre des favoris */
+#PersonalToolbar {
+    background-color: var(--ctp-base) !important;
+    color: var(--ctp-subtext1) !important;
+    border-bottom: 1px solid var(--ctp-mantle) !important;
+}
+
+/* Boutons et icônes */
+toolbarbutton {
+    color: var(--ctp-text) !important;
+    fill: var(--ctp-text) !important;
+}
+
+toolbarbutton:hover {
+    color: var(--ctp-mauve) !important;
+    fill: var(--ctp-mauve) !important;
+}
+
+/* Menus contextuels et popups */
+menupopup, panelmultiview {
+    --panel-background: var(--ctp-mantle) !important;
+    --panel-color: var(--ctp-text) !important;
+    --panel-border-color: var(--ctp-surface0) !important;
+    border-radius: 10px !important;
+}
+
+menuitem:hover, menu:hover {
+    background-color: var(--ctp-surface0) !important;
+    color: var(--ctp-mauve) !important;
+}
+
+/* Barre latérale (Sidebar) */
+#sidebar-box {
+    background-color: var(--ctp-mantle) !important;
+    --sidebar-background-color: var(--ctp-mantle) !important;
+    --sidebar-text-color: var(--ctp-text) !important;
+}
