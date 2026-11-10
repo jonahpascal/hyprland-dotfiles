@@ -19,27 +19,35 @@ style = "Bold"
 family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
-# Thème Tokyo Night / Modern Dark
+# Thème Catppuccin Frappé
 [colors.primary]
-background = "#1a1b26"
-foreground = "#c0caf5"
+background = "#303446"
+foreground = "#c6d0f5"
+
+[colors.cursor]
+text = "#303446"
+cursor = "#f2d5cf"
+
+[colors.selection]
+text = "#303446"
+background = "#f2d5cf"
 
 [colors.normal]
-black = "#15161e"
-red = "#f7768e"
-green = "#9ece6a"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#bb9af7"
-cyan = "#7dcfff"
-white = "#a9b1d6"
+black = "#51576d"
+red = "#e78284"
+green = "#a6d189"
+yellow = "#e5c890"
+blue = "#8caaee"
+magenta = "#f4b8e4"
+cyan = "#81c8be"
+white = "#b5bfe2"
 
 [colors.bright]
-black = "#414868"
-red = "#f7768e"
-green = "#9ece6a"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#bb9af7"
-cyan = "#7dcfff"
-white = "#c0caf5"
+black = "#626880"
+red = "#e78284"
+green = "#a6d189"
+yellow = "#e5c890"
+blue = "#8caaee"
+magenta = "#f4b8e4"
+cyan = "#81c8be"
+white = "#a5adce"

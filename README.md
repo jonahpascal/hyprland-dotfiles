@@ -1,6 +1,6 @@
-# My Hyprland Dotfiles (Hyprland v0.57+ Lua + Alacritty)
+# My Hyprland Dotfiles (Hyprland v0.57+ Lua + Alacritty + Catppuccin Frappé)
 
-Configuration optimisée pour **CachyOS / Arch Linux** (Format Lua natif Hyprland 0.57+, AZERTY + Alacritty + Waybar).
+Configuration optimisée pour **CachyOS / Arch Linux** (Format Lua natif Hyprland 0.57+, Thème **Catppuccin Frappé**, AZERTY + Alacritty + Waybar).
 
 ## 🚀 Installation rapide sur CachyOS
 

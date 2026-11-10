@@ -20,7 +20,7 @@ sudo pacman -S --needed --noconfirm \
 
 echo "=== [2/3] Application des dotfiles avec Stow ==="
 mkdir -p ~/.config
-stow -v -t ~ hypr alacritty waybar
+stow -v -t ~ hypr alacritty waybar rofi
 
 echo "=== [3/3] Terminé avec succès ! ==="
 echo "Tu peux maintenant te déconnecter et sélectionner Hyprland sur ton display manager."

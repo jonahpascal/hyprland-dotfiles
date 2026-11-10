@@ -1,0 +1,107 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    display-drun: "APPS";
+    display-run: "RUN";
+    display-window: "WINDOW";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Catppuccin Frappé Colors */
+    bg-base:     #303446;
+    bg-mantle:   #292c3c;
+    bg-crust:    #232634;
+    bg-surface:  #414559;
+    fg-text:     #c6d0f5;
+    fg-subtext:  #a5adce;
+    mauve:       #ca9ee6;
+    blue:        #8caaee;
+    red:         #e78284;
+    peach:       #ef9f76;
+    green:       #a6d189;
+
+    background-color: transparent;
+    text-color:       @fg-text;
+    margin:           0;
+    padding:          0;
+    spacing:          0;
+}
+
+window {
+    width:            600px;
+    background-color: @bg-base;
+    border:           2px;
+    border-color:     @mauve;
+    border-radius:    14px;
+    padding:          20px;
+}
+
+mainbox {
+    spacing:          15px;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg-mantle;
+    border-radius:    10px;
+    padding:          10px 14px;
+    spacing:          10px;
+    children:         [ prompt, entry ];
+    border:           1px;
+    border-color:     @bg-surface;
+}
+
+prompt {
+    text-color:       @mauve;
+    font:             "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    placeholder:      "Rechercher une application...";
+    placeholder-color:@fg-subtext;
+    text-color:       @fg-text;
+}
+
+listview {
+    lines:            8;
+    columns:          1;
+    fixed-height:     true;
+    spacing:          6px;
+    scrollbar:        false;
+}
+
+element {
+    padding:          8px 12px;
+    border-radius:    8px;
+    spacing:          12px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg-text;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg-text;
+}
+
+element selected.normal {
+    background-color: @mauve;
+    text-color:       @bg-crust;
+}
+
+element-icon {
+    size:             24px;
+    cursor:           pointer;
+}
+
+element-text {
+    vertical-align:   0.5;
+    text-color:       inherit;
+    cursor:           pointer;
+}

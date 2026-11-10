@@ -7,26 +7,26 @@
 }
 
 window#waybar {
-    background-color: rgba(26, 27, 38, 0.85);
-    border-bottom: 2px solid rgba(122, 162, 247, 0.3);
-    color: #c0caf5;
+    background-color: rgba(48, 52, 70, 0.85); /* Frappé Base avec transparence */
+    border-bottom: 2px solid rgba(202, 158, 230, 0.3); /* Mauve translucide */
+    color: #c6d0f5; /* Frappé Text */
 }
 
 #workspaces button {
     padding: 0 10px;
-    color: #565f89;
+    color: #838ba7; /* Frappé Overlay0 */
     border-radius: 6px;
     margin: 4px 2px;
 }
 
 #workspaces button.active {
-    color: #1a1b26;
-    background-color: #7aa2f7;
+    color: #232634; /* Frappé Crust */
+    background-color: #ca9ee6; /* Frappé Mauve */
 }
 
 #workspaces button:hover {
-    background: rgba(122, 162, 247, 0.2);
-    color: #c0caf5;
+    background: rgba(202, 158, 230, 0.2);
+    color: #c6d0f5;
 }
 
 #clock,
@@ -37,22 +37,34 @@ window#waybar {
     padding: 0 12px;
     margin: 4px 2px;
     border-radius: 6px;
-    background-color: #24283b;
+    background-color: #292c3c; /* Frappé Mantle */
 }
 
 #clock {
     font-weight: bold;
-    color: #bb9af7;
+    color: #ca9ee6; /* Frappé Mauve */
+}
+
+#pulseaudio {
+    color: #8caaee; /* Frappé Blue */
+}
+
+#backlight {
+    color: #e5c890; /* Frappé Yellow */
+}
+
+#tray {
+    color: #c6d0f5;
 }
 
 #battery.charging {
-    color: #9ece6a;
+    color: #a6d189; /* Frappé Green */
 }
 
 #battery.warning:not(.charging) {
-    color: #e0af68;
+    color: #ef9f76; /* Frappé Peach */
 }
 
 #battery.critical:not(.charging) {
-    color: #f7768e;
+    color: #e78284; /* Frappé Red */
 }
