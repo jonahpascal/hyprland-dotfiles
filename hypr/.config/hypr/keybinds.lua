@@ -4,22 +4,29 @@
 
 local mainMod  = "SUPER"
 local terminal = "alacritty"
+local fileManager = "command -v thunar >/dev/null 2>&1 && thunar || dolphin"
 local menu     = "rofi -show drun"
 
 -- Applications & Système
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q",      hl.dsp.window.close())
 hl.bind(mainMod .. " + M",      hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E",      hl.dsp.exec_cmd("thunar"))
+hl.bind(mainMod .. " + E",      hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V",      hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE",  hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F",      hl.dsp.window.fullscreen())
 
--- Focus
+-- Focus (déplacer le focus)
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+-- Move Window (déplacer la fenêtre active)
+hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({ direction = "down" }))
 
 -- AZERTY Workspaces (rangée des chiffres : &, é, ", ', (, -, è, _, ç, à)
 local azerty_keys = {

@@ -20,8 +20,11 @@ chmod +x install.sh
 | `Super + Entrée` | Terminal (Alacritty) |
 | `Super + Espace` | Lanceur d'applications (Rofi) |
 | `Super + Q` | Fermer la fenêtre active |
+| `Super + E` | Gestionnaire de fichiers (Thunar) |
 | `Super + F` | Plein écran (Fullscreen) |
 | `Super + V` | Basculer en mode flottant |
+| `Super + Flèches` | Déplacer le focus |
+| `Super + Shift + Flèches` | Déplacer une fenêtre dans la direction |
 | `Super + [1-9]` | Naviguer entre les workspaces (AZERTY direct) |
 | `Super + Shift + [1-9]` | Déplacer la fenêtre vers un workspace |
 | `Super + Clic gauche` | Déplacer une fenêtre |

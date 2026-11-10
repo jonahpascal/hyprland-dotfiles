@@ -9,6 +9,9 @@ sudo pacman -S --needed --noconfirm \
     alacritty \
     waybar \
     rofi-wayland \
+    thunar \
+    thunar-volman \
+    tumbler \
     dunst \
     hyprpaper \
     polkit-kde-agent \
